@@ -1,0 +1,107 @@
+<!HTML file>
+<HTML>
+<HEAD>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<TITLE>Loan Prediction System</TITLE>
+<style>
+.bg-img {
+	text-align: center;
+	font-family: serif;
+	background-image: url("https://images.pexels.com/photos/3760067/pexels-photo-3760067.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260");
+	min-width: 100%;
+	min-height: 100%;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  position: relative;
+}
+
+h1{
+    margin: 0;
+    padding: 0 0 20px;
+    font-size: 22px;
+}	
+	
+input[type=text] {
+  width: 15%;
+  border: 2px solid black;
+  border-radius: 5px;
+  background-color: white;
+  opacity: 0.6;
+  outline: black;
+  height: 30px;
+  color: black;
+  font-size: 16px;
+}
+ 
+select{
+	width: 15%;
+	border: 2px solid black;
+	border-radius: 5px;
+	background-color: black;
+	opacity: 0.6;
+	outline: black;
+	height: 30px;
+	color: white;
+	font-size: 16px;
+}
+
+button{
+	width: 10%;
+	border: 2px solid black;
+	border-radius: 5px;
+	background-color: black;
+	opacity: 0.8;
+	outline: black;
+	height: 30px;
+	color: white;
+	font-size: 16px;
+}
+</style>
+</HEAD>
+<BODY>
+<div class="bg-img">
+<form action="{{ url_for('predict')}}" method="POST">
+	<h1 style="font-size: 200%"><u><b>Loan Prediction System</b></u></h1>
+	<label for="gender"><br><b>Gender<b></br></label>
+	<br/>
+	<select id="gender" name="gender">
+	<option value="Select">Select</option>
+	<option value="Male">Male</option>
+	<option value="Female">Female</option>
+	</select>
+	<br/>
+	<label for="Married"><br>Married</br></label>
+	<br/>
+	<select id="married" name="married">
+	<option value="Select">Select</option>
+	<option value="Y">Yes</option>
+	<option value="N">No</option>
+	</select>
+	<br/>
+	<label for="loanamount"><br>Loan Amount</label></br>
+	<br/>
+	<input type="text" name="loan">
+	<br/>
+	<label for="Chistory"><br>Credit history</label></br>
+	<br/>
+	<input type="text" name="c_history">
+	<br/>
+	<label for="Property Area"><br>Property Area</br></label>
+	</br>
+	<select id="Property Area" name="p_area">
+	<option value="select">Select</option>
+	<option value="Urban">Urban</option>
+	<option value="Rural">Rural</option>
+	<option value="SemiUrban">SemiUrban</option>
+	</select>
+	<br/>
+	
+	<br/>
+	<button type="submit" name="submit" value="predict"><b>Submit</b></button>
+</form>
+</BODY>
+</HTML>

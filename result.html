@@ -1,0 +1,40 @@
+
+<!HTML file>
+<HTML>
+<HEAD>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<TITLE>Loan Prediction System</TITLE>
+<style>
+.bg-img {
+	text-align: center;
+	font-family: serif;
+	background-image: url("https://images.pexels.com/photos/3760067/pexels-photo-3760067.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260");
+	min-width: 100%;
+	min-height: 100%;
+	
+	/* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  position: relative;
+}
+h1{
+    margin: 0;
+    padding: 0 0 20px;
+    font-size: 22px;
+}	
+</style>
+</HEAD>
+<BODY>
+    <div class="bg-img">
+	<div class="results">
+	<center><h1 style="font-size: 200%"><u><b>Loan Prediction System</b></u></h1></center>
+	{% if prediction == 1%}
+	<center><h2> You are eligible</h2></center>
+	{% elif prediction == 0%}
+	<center><h3>You are not eligible</h3></center>
+	{% endif %}
+	</div>
+	</div>
+</BODY>
+</HTML>
